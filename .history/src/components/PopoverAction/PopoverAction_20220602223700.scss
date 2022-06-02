@@ -1,0 +1,55 @@
+.btn-action {
+    z-index: 10;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.btn-circle {
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    cursor: pointer;
+
+    &-button {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 100rem;
+        display: none;
+    }
+}
+
+.btn-card {
+    padding: 10px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    border-radius: 10px;
+    display: none;
+    &-text {
+        margin: auto;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+    }
+    input {
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 20px;
+        display: none;
+    }
+}
+
+.btn-action:hover .btn-circle-button {
+    display: block;
+}
+
+.btn-action:hover .btn-card {
+    display: block;
+}

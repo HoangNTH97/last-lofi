@@ -1,0 +1,30 @@
+.background {
+    height: 100vh;
+    width: 100vh;
+}
+
+.background-video {
+    height: 100%;
+    width: 100%;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.city-rain {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+
+.enter {
+    position: absolute;
+    top: 50%;
+    left: 64%;
+}

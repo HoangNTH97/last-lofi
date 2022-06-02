@@ -1,0 +1,40 @@
+.music {
+    padding: 32px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-item {
+        display: flex;
+        width: 300px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        img {
+            cursor: pointer;
+        }
+    }
+    &-prev {
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    &-play {
+        img {
+            width: 54px;
+            height: 54px;
+        }
+    }
+
+    &-next {
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
