@@ -27,18 +27,14 @@ function BackgroundVideo({ videoList }) {
     const handleVolume1 = (data) => {
         setVolume1(data);
         console.log(data);
-    };
-    useEffect(() => {
         rainRef.current.volume = volume1 / 100;
-    }, [volume1]);
+    };
 
     const handleVolume2 = (data) => {
         setVolume2(data);
         console.log(data);
-    };
-    useEffect(() => {
         keyboardRef.current.volume = volume2 / 100;
-    }, [volume2]);
+    };
 
     // back ground
     const handleVideo = () => {

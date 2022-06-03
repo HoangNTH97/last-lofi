@@ -11,7 +11,7 @@ Button.propTypes = {
 function Button({ handlePopover, isOn, btnName, handleVolume, hidden }) {
     return (
         <div>
-            <div className="btn-action" style={hidden ? { display: 'none' } : { display: 'block' }}>
+            <div className="btn-action" style={hidden ? { display: 'block' } : { display: 'none' }}>
                 <div className="btn-circle" onClick={handlePopover}>
                     <div className="btn-circle-button"></div>
                 </div>

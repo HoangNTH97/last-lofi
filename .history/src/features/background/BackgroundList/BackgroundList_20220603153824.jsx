@@ -16,45 +16,35 @@ function BackgroundVideo({ videoList }) {
     const [inOut, setInOut] = useState(false);
     const [keyboard, setKeyboard] = useState(false);
 
-    const [volume1, setVolume1] = useState(20); //volume rain
-    const [volume2, setVolume2] = useState(20); //volume keyboard
+    const [volume, setVolume] = useState(20);
+    const [volumeKeyboard, setVolumeKeyboard] = useState(20);
+    const handleVolume1 = (data) => {
+        setVolume(data);
+        rainRef.current.volume = volume / 100;
+        keyboardRef.current.volume = volume / 100;
+    };
 
-    // useRef
     const rainRef = useRef();
     const keyboardRef = useRef();
 
-    // audio
-    const handleVolume1 = (data) => {
-        setVolume1(data);
-        console.log(data);
-    };
-    useEffect(() => {
-        rainRef.current.volume = volume1 / 100;
-    }, [volume1]);
-
-    const handleVolume2 = (data) => {
-        setVolume2(data);
-        console.log(data);
-    };
-    useEffect(() => {
-        keyboardRef.current.volume = volume2 / 100;
-    }, [volume2]);
-
-    // back ground
     const handleVideo = () => {
         setDay(!day);
     };
-    const handleInOut = () => {
-        setInOut(!inOut);
-    };
+
     const handleRain = () => {
         setRain(!rain);
         !rain ? rainRef.current.play() : rainRef.current.pause();
+        rainRef.current.volume = volume / 100;
+    };
+
+    const handleInOut = () => {
+        setInOut(!inOut);
     };
 
     const handleKeyboard = () => {
         setKeyboard(!keyboard);
         !keyboard ? keyboardRef.current.play() : keyboardRef.current.pause();
+        keyboardRef.current.volume = volume / 100;
     };
 
     console.log(`day:${day}, rain:${rain}, inOut:${inOut}`);
@@ -70,6 +60,7 @@ function BackgroundVideo({ videoList }) {
                         isOn={!rain}
                         btnName="City Rain"
                     />
+
                     <audio loop ref={rainRef} src={musicRain}></audio>
                 </div>
 
@@ -86,8 +77,7 @@ function BackgroundVideo({ videoList }) {
                     <Button
                         btnName="Keyboard"
                         isOn={!keyboard}
-                        hidden={!inOut}
-                        handleVolume={handleVolume2}
+                        handleVolume={handleVolume}
                         handlePopover={handleKeyboard}
                     />
 

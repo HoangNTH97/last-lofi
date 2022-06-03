@@ -8,20 +8,17 @@ Button.propTypes = {
     btnName: PropTypes.string.isRequired,
 };
 
-function Button({ handlePopover, isOn, btnName, handleVolume, hidden }) {
+function Button({ handlePopover, isOn, btnName, handleVolume }) {
     return (
         <div>
-            <div className="btn-action" style={hidden ? { display: 'none' } : { display: 'block' }}>
+            <div className="btn-action">
                 <div className="btn-circle" onClick={handlePopover}>
                     <div className="btn-circle-button"></div>
                 </div>
                 <div className="btn-card">
                     <h6 className="btn-card-text">{btnName}</h6>
                     <input
-                        defaultValue={20}
-                        onChange={(e) => {
-                            handleVolume(e.target.value);
-                        }}
+                        onChange={handleVolume}
                         type="range"
                         style={isOn ? { display: 'none' } : { display: 'block' }}
                     />

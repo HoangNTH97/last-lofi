@@ -18,7 +18,7 @@ function Button({ handlePopover, isOn, btnName, handleVolume, hidden }) {
                 <div className="btn-card">
                     <h6 className="btn-card-text">{btnName}</h6>
                     <input
-                        defaultValue={20}
+                        defaultValue={100}
                         onChange={(e) => {
                             handleVolume(e.target.value);
                         }}
