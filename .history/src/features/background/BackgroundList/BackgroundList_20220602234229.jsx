@@ -36,7 +36,7 @@ function BackgroundVideo({ videoList }) {
             <div className="background">
                 <div className="city-rain">
                     <Button handlePopover={handleRain} isOn={!rain} btnName="City Rain" />
-                    <audio loop ref={rainRef} src={musicRain}></audio>
+                    {/* <audio loop ref={rainRef} src={musicRain}></audio> */}
                 </div>
 
                 <div className="enter">

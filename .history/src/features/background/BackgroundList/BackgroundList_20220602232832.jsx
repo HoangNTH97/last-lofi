@@ -4,7 +4,6 @@ import Header from '../../../components/Header/Header';
 import Button from '../../../components/PopoverAction/PopoverAction';
 import PopoverBtn from '../../../components/PopoverBtn/PopoverBtn';
 import musicRain from '../../../assets/Music/raincity.mp3';
-import musicKeyboard from '../../../assets/Music/keyboard.mp3';
 
 import './BackgroundList.scss';
 
@@ -16,7 +15,6 @@ function BackgroundVideo({ videoList }) {
     const [inOut, setInOut] = useState(false);
 
     const rainRef = useRef();
-    const keyboardRef = useRef();
 
     const handleVideo = () => {
         setDay(!day);
@@ -32,7 +30,9 @@ function BackgroundVideo({ videoList }) {
 
     return (
         <div>
-            <Header handleVideo={handleVideo}></Header>
+            <Header handleVideo={handleVideo}>
+                <audio loop ref={rainRef} src={musicRain}></audio>
+            </Header>
             <div className="background">
                 <div className="city-rain">
                     <Button handlePopover={handleRain} isOn={!rain} btnName="City Rain" />

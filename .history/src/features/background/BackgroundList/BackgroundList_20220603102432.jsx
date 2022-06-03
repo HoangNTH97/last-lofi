@@ -23,7 +23,7 @@ function BackgroundVideo({ videoList }) {
     };
     const handleRain = () => {
         setRain(!rain);
-        !rain ? rainRef.current.play() : rainRef.current.pause();
+        !rain ? rainRef.current.autoplay() : rainRef.current.pause();
     };
     const handleInOut = () => {
         setInOut(!inOut);

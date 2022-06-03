@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../../components/Header/Header';
 import Button from '../../../components/PopoverAction/PopoverAction';
 import PopoverBtn from '../../../components/PopoverBtn/PopoverBtn';
 import musicRain from '../../../assets/Music/raincity.mp3';
-import musicKeyboard from '../../../assets/Music/keyboard.mp3';
 
 import './BackgroundList.scss';
 
@@ -15,15 +14,13 @@ function BackgroundVideo({ videoList }) {
     const [rain, setRain] = useState(false);
     const [inOut, setInOut] = useState(false);
 
-    const rainRef = useRef();
-    const keyboardRef = useRef();
+    const rainRef = use
 
     const handleVideo = () => {
         setDay(!day);
     };
     const handleRain = () => {
         setRain(!rain);
-        !rain ? rainRef.current.play() : rainRef.current.pause();
     };
     const handleInOut = () => {
         setInOut(!inOut);
@@ -32,11 +29,11 @@ function BackgroundVideo({ videoList }) {
 
     return (
         <div>
-            <Header handleVideo={handleVideo}></Header>
+            <Header handleVideo={handleVideo} />
             <div className="background">
                 <div className="city-rain">
                     <Button handlePopover={handleRain} isOn={!rain} btnName="City Rain" />
-                    <audio loop ref={rainRef} src={musicRain}></audio>
+                    <audio ref={rainRef} src={musicRain}></audio>
                 </div>
 
                 <div className="enter">

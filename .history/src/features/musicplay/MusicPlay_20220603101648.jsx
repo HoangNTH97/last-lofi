@@ -10,9 +10,9 @@ MusicPlay.propTypes = {};
 
 function MusicPlay(props) {
     const audioRef = useRef();
-    const index = Math.trunc(Math.random() * audios.length + 1);
-    const [audioIndex, setAudioIndex] = useState(index);
 
+    const [audioIndex, setAudioIndex] = useState(0);
+    console.log(audioIndex);
     const [duration, setDuration] = useState(0);
     const [playPause, setPlayPause] = useState(false);
 
@@ -62,6 +62,7 @@ function MusicPlay(props) {
                     src={audios[audioIndex].src}
                     onEnded={() => setAudioIndex(audioIndex + 1)}
                     onLoadedData={handleLoadedData}
+                    controls
                 />
             </div>
         </div>

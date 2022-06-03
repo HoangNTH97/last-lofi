@@ -10,19 +10,13 @@ MusicPlay.propTypes = {};
 
 function MusicPlay(props) {
     const audioRef = useRef();
-    const index = Math.trunc(Math.random() * audios.length + 1);
-    const [audioIndex, setAudioIndex] = useState(index);
 
-    const [duration, setDuration] = useState(0);
+    const [audioIndex, setAudioIndex] = useState(0);
+
     const [playPause, setPlayPause] = useState(false);
 
     const swapBtn = () => {
         setPlayPause(!playPause);
-    };
-
-    const handleLoadedData = () => {
-        setDuration(audioRef.current.duration);
-        if (playPause) audioRef.current.play();
     };
 
     const handlePausePlayClick = () => {
@@ -38,6 +32,8 @@ function MusicPlay(props) {
         if (audioIndex > 0) {
             setAudioIndex(audioIndex - 1);
         }
+        audioRef.current.play();
+        setPlayPause(true);
     };
 
     return (
@@ -60,8 +56,7 @@ function MusicPlay(props) {
                 <audio
                     ref={audioRef}
                     src={audios[audioIndex].src}
-                    onEnded={() => setAudioIndex(audioIndex + 1)}
-                    onLoadedData={handleLoadedData}
+                    onEnded={() => setPlayPause(false)}
                 />
             </div>
         </div>

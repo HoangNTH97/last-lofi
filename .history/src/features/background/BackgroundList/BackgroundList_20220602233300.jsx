@@ -20,10 +20,12 @@ function BackgroundVideo({ videoList }) {
 
     const handleVideo = () => {
         setDay(!day);
+        !day ? keyboardRef.current.play() : keyboardRef.current.pause();
     };
     const handleRain = () => {
         setRain(!rain);
         !rain ? rainRef.current.play() : rainRef.current.pause();
+        !rain ? keyboardRef.current.play() : keyboardRef.current.pause();
     };
     const handleInOut = () => {
         setInOut(!inOut);
@@ -32,7 +34,9 @@ function BackgroundVideo({ videoList }) {
 
     return (
         <div>
-            <Header handleVideo={handleVideo}></Header>
+            <Header handleVideo={handleVideo}>
+                <audio loop ref={keyboardRef} src={musicKeyboard}></audio>
+            </Header>
             <div className="background">
                 <div className="city-rain">
                     <Button handlePopover={handleRain} isOn={!rain} btnName="City Rain" />

@@ -10,9 +10,8 @@ MusicPlay.propTypes = {};
 
 function MusicPlay(props) {
     const audioRef = useRef();
-    const index = Math.trunc(Math.random() * audios.length + 1);
-    const [audioIndex, setAudioIndex] = useState(index);
 
+    const [audioIndex, setAudioIndex] = useState(0);
     const [duration, setDuration] = useState(0);
     const [playPause, setPlayPause] = useState(false);
 
@@ -34,34 +33,25 @@ function MusicPlay(props) {
         setPlayPause(!playPause);
     };
 
-    const handlePrev = () => {
-        if (audioIndex > 0) {
-            setAudioIndex(audioIndex - 1);
-        }
-    };
-
     return (
         <div>
             <div className="music">
                 <div className="music-item">
-                    <div className="music-prev" onClick={handlePrev}>
+                    <div className="music-prev">
                         <img src={prevIcon} alt="" />
                     </div>
-                    <div className="music-play" onClick={handlePausePlayClick}>
+                    <div className="music-play">
                         <img onClick={swapBtn} src={!playPause ? playIcon : pauseIcon} alt="" />
                     </div>
-                    <div
-                        className="music-next"
-                        onClick={() => setAudioIndex((audioIndex + 1) % audios.length)}
-                    >
+                    <div className="music-next">
                         <img src={nexticon} alt="" />
                     </div>
                 </div>
                 <audio
                     ref={audioRef}
                     src={audios[audioIndex].src}
-                    onEnded={() => setAudioIndex(audioIndex + 1)}
                     onLoadedData={handleLoadedData}
+                    onEnded={() => setPlayPause(false)}
                 />
             </div>
         </div>

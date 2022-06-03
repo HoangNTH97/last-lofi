@@ -10,8 +10,8 @@ MusicPlay.propTypes = {};
 
 function MusicPlay(props) {
     const audioRef = useRef();
-    const index = Math.trunc(Math.random() * audios.length + 1);
-    const [audioIndex, setAudioIndex] = useState(index);
+
+    const [audioIndex, setAudioIndex] = useState(0);
 
     const [duration, setDuration] = useState(0);
     const [playPause, setPlayPause] = useState(false);

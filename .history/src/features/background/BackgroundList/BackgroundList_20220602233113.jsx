@@ -32,7 +32,9 @@ function BackgroundVideo({ videoList }) {
 
     return (
         <div>
-            <Header handleVideo={handleVideo}></Header>
+            <Header handleVideo={handleVideo}>
+                <audio loop ref={musicKeyboard} src={musicKeyboard}></audio>
+            </Header>
             <div className="background">
                 <div className="city-rain">
                     <Button handlePopover={handleRain} isOn={!rain} btnName="City Rain" />
