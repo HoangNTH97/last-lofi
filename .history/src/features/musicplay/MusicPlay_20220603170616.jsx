@@ -23,7 +23,7 @@ function MusicPlay(props) {
     const handleLoadedData = () => {
         setDuration(audioRef.current.duration);
         if (playPause) audioRef.current.play();
-        audioRef.current.volume = 50 / 100;
+        audioRef.current.volume = 10 / 100;
     };
 
     const handlePausePlayClick = () => {
@@ -63,6 +63,7 @@ function MusicPlay(props) {
                     src={audios[audioIndex].src}
                     onEnded={() => setAudioIndex(audioIndex + 1)}
                     onLoadedData={handleLoadedData}
+                    controls
                 />
             </div>
         </div>
