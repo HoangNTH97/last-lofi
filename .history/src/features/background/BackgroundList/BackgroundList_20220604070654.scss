@@ -1,0 +1,45 @@
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.background-cta {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.background-video {
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.city-rain {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+
+.enter {
+    position: absolute;
+    top: 50%;
+    left: 64%;
+}
+
+.keyboard {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+}

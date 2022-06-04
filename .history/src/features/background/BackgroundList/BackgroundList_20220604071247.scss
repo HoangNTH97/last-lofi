@@ -5,8 +5,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    overflow: hidden;
-    position: relative;
 }
 
 .background-cta {
@@ -32,15 +30,16 @@
     -webkit-transform: translate(-50%, -50%) !important;
     transform: translate(-50%, -50%) !important;
     width: 177.77778vh !important;
+    z-index: 400;
 }
 
 .video {
     height: 100%;
     width: 100%;
-    // background-size: cover;
-    // object-fit: cover;
-    // position: absolute;
-    // transition: opacity 1.5s ease-in-out;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .city-rain {

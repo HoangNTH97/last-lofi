@@ -63,7 +63,7 @@ function BackgroundVideo({ videoList }) {
         <div>
             <Header handleVideo={handleVideo}></Header>
             <div className="background">
-                <div className="background-cta">
+                <div>
                     <div className="city-rain">
                         <Button
                             handleVolume={handleVolume1}
