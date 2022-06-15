@@ -1,0 +1,94 @@
+.modal-premium {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.modal-container {
+  width: 85vw;
+  height: auto;
+  border-radius: 16px;
+  background-color: rgba(7, 7, 7, 0.5);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.modal-get {
+  flex: 3;
+  background-color: var(--black-color);
+  padding: 30px 20px;
+  border-radius: 16px;
+  &--header {
+    color: var(--white-color);
+  }
+
+  &--pay {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: var(--white-color);
+  }
+
+  &--stretch {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  &--basic {
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--grey-dark);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--premium {
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--grey-dark);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .type {
+    color: var(--white-color);
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .money {
+    margin-top: 20px;
+    color: var(--primary-color);
+    display: inline-flex;
+    justify-content: center;
+
+    & p {
+      color: var(--white-color);
+    }
+  }
+
+  .btn-basic {
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+}
+
+.modal-fixed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-join {
+  flex: 2;
+}

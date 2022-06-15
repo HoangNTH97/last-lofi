@@ -1,0 +1,33 @@
+.fixed-item {
+  display: inline-flex;
+  align-items: center;
+
+  :hover {
+    cursor: default;
+  }
+  .active-icon {
+    margin-right: 20px;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .disabled-icon {
+    margin-right: 20px;
+    color: var(--dark-color);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .title-active {
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  .title-disabled {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
