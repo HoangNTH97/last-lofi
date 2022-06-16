@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 import Button from '../../components/Button/Button';
 import { ButtonSwitch } from '../../components/Button/ButtonSwitch/ButtonSwitch';
-import ModalMosaic1 from './Modal-mosaic/ModalMosaic1';
 import ModalFixedItem from './ModalFixedItem/ModalFixedItem';
 import './ModalPremium.scss';
 
@@ -187,11 +186,6 @@ export default function PremiumModal({ children }) {
                 </div>
 
                 <h3>Don't believe in numbers?</h3>
-                <h6>Read what users write on socials about us.</h6>
-
-                <div className="mosaic">
-                  <ModalMosaic1 />
-                </div>
               </div>
             </div>
           </div>

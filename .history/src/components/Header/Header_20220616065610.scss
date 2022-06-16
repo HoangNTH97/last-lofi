@@ -1,13 +1,13 @@
 .header {
   margin-top: 20px;
-  width: 100%;
-  display: flex;
   background-color: rgba($color: #000000, $alpha: 0);
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   padding: 0 48px 0 100px;
   position: fixed;
+  width: 100%;
   z-index: 100;
 
   img {
@@ -54,12 +54,6 @@
   }
 }
 
-.header-icon {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
 .share-icon,
 .expand-icon,
 .bars-icon {
@@ -75,48 +69,4 @@
   right: 10px;
   top: 55px;
   position: absolute;
-}
-
-//Tablet screen
-@media (min-width: 739px) and (max-width: 1023px) {
-  .header {
-    flex-direction: row-reverse;
-  }
-
-  .header-item {
-    flex-direction: column-reverse;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    align-items: flex-start;
-
-    .header-icon {
-      font-size: 2rem;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 30px;
-    }
-  }
-}
-
-//mobile
-@media (max-width: 740px) {
-  .header {
-    flex-direction: row-reverse;
-  }
-
-  .header-item {
-    flex-direction: column-reverse;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    align-items: flex-start;
-
-    .header-icon {
-      font-size: 2rem;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 30px;
-    }
-  }
 }

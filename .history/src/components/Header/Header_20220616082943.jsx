@@ -36,20 +36,18 @@ function Header({ handleVideo }) {
         <div className="header-signup">
           <HeaderButton3 text="Sign Up" />
         </div>
-        <div className="header-icon">
-          <div className="share-icon">
-            <FontAwesomeIcon icon={faShareSquare} />
+        <div className="share-icon">
+          <FontAwesomeIcon icon={faShareSquare} />
+        </div>
+        <div className="expand-icon">
+          <FontAwesomeIcon icon={faExpand} />
+        </div>
+        <div className="Menu">
+          <div className="bars-icon" onClick={hideMenu}>
+            <FontAwesomeIcon icon={faBars} />
           </div>
-          <div className="expand-icon">
-            <FontAwesomeIcon icon={faExpand} />
-          </div>
-          <div className="Menu">
-            <div className="bars-icon" onClick={hideMenu}>
-              <FontAwesomeIcon icon={faBars} />
-            </div>
 
-            <MenuList hide={hide} />
-          </div>
+          <MenuList hide={hide} />
         </div>
       </div>
     </div>

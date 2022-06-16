@@ -65,14 +65,14 @@
 
 @media (max-height: 830px) {
   .city-rain {
-    top: 55%;
+    top: 50%;
   }
 }
 
 //Mobile
-@media (max-width: 740px) and (max-height: 830px) {
+@media (max-width: 740px) {
   .city-rain {
-    top: 55%;
+    top: 32%;
     left: 2%;
   }
 

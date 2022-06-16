@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 import Button from '../../components/Button/Button';
 import { ButtonSwitch } from '../../components/Button/ButtonSwitch/ButtonSwitch';
-import ModalMosaic1 from './Modal-mosaic/ModalMosaic1';
 import ModalFixedItem from './ModalFixedItem/ModalFixedItem';
 import './ModalPremium.scss';
 
@@ -182,15 +181,7 @@ export default function PremiumModal({ children }) {
                 </div>
 
                 <div className="modal-join--member">
-                  <h2 className="modal-join--accent">+150.000</h2>
-                  <p className="modal-join--title">Users chilling every month</p>
-                </div>
-
-                <h3>Don't believe in numbers?</h3>
-                <h6>Read what users write on socials about us.</h6>
-
-                <div className="mosaic">
-                  <ModalMosaic1 />
+                  <h2 className="accent"></h2>
                 </div>
               </div>
             </div>

@@ -54,12 +54,6 @@
   }
 }
 
-.header-icon {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
 .share-icon,
 .expand-icon,
 .bars-icon {
@@ -86,37 +80,8 @@
   .header-item {
     flex-direction: column-reverse;
     position: fixed;
-    top: 5%;
-    left: 5%;
+    top: 0;
+    left: 10px;
     align-items: flex-start;
-
-    .header-icon {
-      font-size: 2rem;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 30px;
-    }
-  }
-}
-
-//mobile
-@media (max-width: 740px) {
-  .header {
-    flex-direction: row-reverse;
-  }
-
-  .header-item {
-    flex-direction: column-reverse;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    align-items: flex-start;
-
-    .header-icon {
-      font-size: 2rem;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 30px;
-    }
   }
 }

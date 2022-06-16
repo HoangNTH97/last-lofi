@@ -61,7 +61,7 @@ function BackgroundVideo({ videoList }) {
   console.log(`day:${day}, rain:${rain}, inOut:${inOut}`);
 
   return (
-    <div className="wrapper">
+    <div className="background">
       <div className="background-cta">
         <Header handleVideo={handleVideo}></Header>
         <div className="city-rain">

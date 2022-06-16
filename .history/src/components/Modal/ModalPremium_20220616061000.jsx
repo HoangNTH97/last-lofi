@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 import Button from '../../components/Button/Button';
 import { ButtonSwitch } from '../../components/Button/ButtonSwitch/ButtonSwitch';
-import ModalMosaic1 from './Modal-mosaic/ModalMosaic1';
 import ModalFixedItem from './ModalFixedItem/ModalFixedItem';
 import './ModalPremium.scss';
 
@@ -163,10 +162,7 @@ export default function PremiumModal({ children }) {
 
                 <div className="modal-get-footer">
                   <div className="footer-button">
-                    <Button
-                      className={'footer-button--item out-line primary'}
-                      leftIcon={<FontAwesomeIcon icon={faInfinity} />}
-                    >
+                    <Button className={''} leftIcon={<FontAwesomeIcon icon={faInfinity} />}>
                       <span>Lifetime access</span>
                     </Button>
                   </div>
@@ -176,23 +172,7 @@ export default function PremiumModal({ children }) {
                   </div>
                 </div>
               </div>
-              <div className="modal-join">
-                <div className="modal-join--header">
-                  Join the <span>lofi.co</span> family
-                </div>
-
-                <div className="modal-join--member">
-                  <h2 className="modal-join--accent">+150.000</h2>
-                  <p className="modal-join--title">Users chilling every month</p>
-                </div>
-
-                <h3>Don't believe in numbers?</h3>
-                <h6>Read what users write on socials about us.</h6>
-
-                <div className="mosaic">
-                  <ModalMosaic1 />
-                </div>
-              </div>
+              <div className="modal-join"></div>
             </div>
           </div>
         </Fade>

@@ -147,26 +147,14 @@
   display: flex;
   justify-content: space-between;
 
-  .footer-button {
-    flex: 1;
-
-    &--item {
-      padding: 10px;
-      border-radius: 20px;
-      font-size: 1.6rem;
-      font-weight: 600;
-    }
-  }
   .footer-title {
     color: var(--white-color);
-    flex: 1;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
   }
 }
 
 .modal-join {
   flex: 2;
-  color: var(--white-color);
 }

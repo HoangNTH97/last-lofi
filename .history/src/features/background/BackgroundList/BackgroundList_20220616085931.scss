@@ -53,36 +53,7 @@
   }
 
   .enter {
-    top: 45%;
-    left: 60%;
-  }
-
-  .keyboard {
-    top: 50%;
-    left: 70%;
-  }
-}
-
-@media (max-height: 830px) {
-  .city-rain {
-    top: 55%;
-  }
-}
-
-//Mobile
-@media (max-width: 740px) and (max-height: 830px) {
-  .city-rain {
-    top: 55%;
-    left: 2%;
-  }
-
-  .enter {
-    top: 45%;
-    left: 60%;
-  }
-
-  .keyboard {
-    top: 50%;
-    left: 70%;
+    top: 32%;
+    left: 15%;
   }
 }

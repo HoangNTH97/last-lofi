@@ -1,15 +1,17 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { faShareSquare } from '@fortawesome/free-regular-svg-icons';
-import { faBars, faExpand } from '@fortawesome/free-solid-svg-icons';
+import menuIcon from '../../assets/icon/menu-3.svg';
 import logo from '../../assets/Media/logo.0cbf9e63b4a021661126.gif';
 import HeaderButton2 from '../../components/Button/HeaderButton2/HeaderButton2';
 import HeaderButton3 from '../../components/Button/HeaderButton3/HeaderButton3';
 import MenuList from '../MenuList/MenuList';
 import PremiumModal from '../Modal/ModalPremium';
 import './Header.scss';
+import { faShareSquare } from '@fortawesome/free-regular-svg-icons';
+import { faExpand, faBars } from '@fortawesome/free-solid-svg-icons';
 
 Header.propTypes = {
   handleVideo: PropTypes.func.isRequired,
@@ -36,20 +38,18 @@ function Header({ handleVideo }) {
         <div className="header-signup">
           <HeaderButton3 text="Sign Up" />
         </div>
-        <div className="header-icon">
-          <div className="share-icon">
-            <FontAwesomeIcon icon={faShareSquare} />
+        <div className="share-icon">
+          <FontAwesomeIcon icon={faShareSquare} />
+        </div>
+        <div className="expand-icon">
+          <FontAwesomeIcon icon={faExpand} />
+        </div>
+        <div className="Menu">
+          <div className="bars-icon" onClick={hideMenu}>
+            <FontAwesomeIcon icon={faBars} />
           </div>
-          <div className="expand-icon">
-            <FontAwesomeIcon icon={faExpand} />
-          </div>
-          <div className="Menu">
-            <div className="bars-icon" onClick={hideMenu}>
-              <FontAwesomeIcon icon={faBars} />
-            </div>
 
-            <MenuList hide={hide} />
-          </div>
+          <MenuList hide={hide} />
         </div>
       </div>
     </div>
