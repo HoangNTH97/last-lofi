@@ -247,20 +247,3 @@
     flex-direction: column;
   }
 }
-
-// mobile
-
-@media (max-width: 740px) {
-  .modal-get--stretch {
-    flex-direction: column;
-  }
-
-  .modal-get--pay {
-    height: 150%;
-  }
-
-  .modal-get-footer {
-    flex-direction: column;
-    align-items: center;
-  }
-}

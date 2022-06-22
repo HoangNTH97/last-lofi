@@ -232,6 +232,7 @@
 }
 
 //Tablet
+
 @media (max-width: 1365px) {
   .modal-premium {
     overflow-y: scroll;
@@ -239,28 +240,5 @@
 
   .modal-container {
     flex-direction: column;
-  }
-}
-
-@media (min-width: 739px) and (max-width: 1023px) {
-  .modal-get--stretch {
-    flex-direction: column;
-  }
-}
-
-// mobile
-
-@media (max-width: 740px) {
-  .modal-get--stretch {
-    flex-direction: column;
-  }
-
-  .modal-get--pay {
-    height: 150%;
-  }
-
-  .modal-get-footer {
-    flex-direction: column;
-    align-items: center;
   }
 }
