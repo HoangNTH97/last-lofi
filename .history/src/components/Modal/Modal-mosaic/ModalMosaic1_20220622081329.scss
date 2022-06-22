@@ -1,0 +1,16 @@
+.mosaic-item {
+  width: 300px;
+  height: 200px;
+  background-color: #000000cb;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.mosaic-content {
+  max-width: 300px;
+  .mosaic-image {
+    max-width: ;
+    object-fit: cover;
+    background-size: cover;
+  }
+}

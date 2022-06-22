@@ -1,0 +1,12 @@
+.mosaic-content {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #000000cb;
+
+  .mosaic-image {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+}

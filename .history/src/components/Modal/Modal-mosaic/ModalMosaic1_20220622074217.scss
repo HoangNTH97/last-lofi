@@ -1,0 +1,9 @@
+.mosaic-content {
+  width: 100%;
+
+  .mosaic-image {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+}
