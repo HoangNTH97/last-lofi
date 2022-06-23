@@ -10,7 +10,6 @@ import HeaderButton3 from '../../components/Button/HeaderButton3/HeaderButton3';
 import MenuList from '../MenuList/MenuList';
 import PremiumModal from '../Modal/ModalPremium/ModalPremium';
 import './Header.scss';
-import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
 
 Header.propTypes = {
   handleVideo: PropTypes.func.isRequired,
@@ -35,9 +34,7 @@ function Header({ handleVideo }) {
           </PremiumModal>
         </div>
         <div className="header-signup">
-          <ModalSignUp>
-            <HeaderButton3>Sign Up</HeaderButton3>
-          </ModalSignUp>
+          <HeaderButton3>Sign Up</HeaderButton3>
         </div>
         <div className="header-icon">
           <div className="share-icon">

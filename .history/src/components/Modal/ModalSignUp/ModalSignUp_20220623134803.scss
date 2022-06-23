@@ -1,0 +1,126 @@
+.modal-signup {
+  width: 100%;
+  height: 100%;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white-color);
+
+  &--close {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 3rem;
+    color: var(--white-color);
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &--logo {
+    width: 250px;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      background-size: cover;
+    }
+  }
+}
+
+.modal-signup--content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-signup--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    font-size: 4.6rem;
+    margin: 16px 0;
+  }
+
+  & h4 {
+    font-size: 2rem;
+  }
+}
+
+.modal-signup-input {
+  padding: 5px;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  overflow: hidden;
+
+  & input {
+    padding: 10px 20px;
+    border: none;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #080808;
+    color: var(--white-color);
+  }
+
+  .username,
+  .email {
+    border-bottom: 1px solid #ffffff17;
+  }
+}
+
+.modal-signup--title {
+  margin-top: 30px;
+  font-size: 1.2rem;
+
+  & span {
+    color: var(--primary-color);
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.modal-signup--btn {
+  .btn-premium {
+    padding: 6px 25px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.modal-signup--login {
+  margin-top: 40px;
+  font-size: 1.6rem;
+
+  & span {
+    color: var(--primary-color);
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
